@@ -1,0 +1,59 @@
+@import "../../variables.scss";
+
+.swiper-slider{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.swiper-slide{
+    width: 208px;
+    max-width: 208px;
+    min-height: 317px;
+
+    h5{
+        margin-top: 8px;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $brand-primary;
+}
+
+.price{
+    margin-bottom: 6px;
+}
+
+.small-desc{
+    color: #788D9E;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.secondary-button{
+    width: 100%;
+    margin-left: 0;
+  }
+
+@media only screen and (max-width: 500px) {
+    .heading{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+

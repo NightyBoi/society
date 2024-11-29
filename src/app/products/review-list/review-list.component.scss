@@ -1,0 +1,76 @@
+@import "../../../variables.scss";
+
+.review-list-section{
+    background-color: #F8F8F8;
+    padding: 40px 0;
+}
+
+.stars{
+    color: #DBCC01;
+}
+
+.user-name{
+    color: $brand-primary;
+    font-weight: 700;
+}
+
+.user-field{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+
+    p{
+        margin-bottom: 0;
+    }
+}
+
+.review-date{
+    font-weight: 400;
+    color: #788D9E;
+    font-size: .9rem;
+}
+
+.review-title{
+    color: $brand-primary;
+    font-weight: 700;
+}
+
+.review-description{
+    color: $brand-primary;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.review-images{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img{
+        margin-right: 8px;
+        max-width: 150px;
+        width: 30%;
+    }
+}
+
+.review-row{
+    border-bottom: 1px solid #d4d4d4;
+    padding-top: 24px;
+    padding-bottom: 8px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.primary-button{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+}

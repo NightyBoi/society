@@ -1,0 +1,25 @@
+<app-lander></app-lander>
+
+<div class="container-fluid" style="background-color: #F8F8F8;">
+    <app-product-picker [productsToSend]="acneProducts" [productsInfo]="acneInfo"></app-product-picker>
+</div>
+
+<div class="container-fluid" style="background-color: white;">
+    <app-product-picker [productsToSend]="antiAgeProducts" [productsInfo]="antiAgeInfo"></app-product-picker>
+</div>
+
+<div class="container-fluid" style="background-color: #F8F8F8;">
+    <app-product-picker [productsToSend]="rosaceaProducts" [productsInfo]="rosaceaInfo"></app-product-picker>
+</div>
+
+<div class="container-fluid" style="background-color: white;">
+    <app-product-picker [productsToSend]="melasmaProducts" [productsInfo]="melasmaInfo"></app-product-picker>
+</div>
+
+<app-reviews [reviews]="dermatologyReviews" reviewsTitle="Expert Healthcare, Proven Results"></app-reviews>
+
+<app-howitworks></app-howitworks>
+
+<app-faq></app-faq>
+
+<app-skin-in-check></app-skin-in-check>

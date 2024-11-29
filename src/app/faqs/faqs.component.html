@@ -1,0 +1,29 @@
+<div class="container-fluid faq-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p><a routerLink="/services">Resources</a> > FAQs</p>
+            </div>
+
+            <div class="col-md-4">
+                <form>
+                    <input class="search" placeholder="Search">
+                </form>
+
+                <p class="category-heading">Categories</p>
+
+                <div class="categories">
+                    <button [disabled]="currentIndex == 0" (click)="switchFAQ(0);">About Society</button>
+                    <button [disabled]="currentIndex == 1" (click)="switchFAQ(1);">Pricing and Services</button>
+                    <button [disabled]="currentIndex == 2" (click)="switchFAQ(2);">Tretinoin and Ingredients</button>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="faq-list">
+                    <app-faq-lister [faqSource]="currentFAQ" [faqTitle]="titleText"></app-faq-lister>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

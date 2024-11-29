@@ -1,0 +1,23 @@
+@import "../../../variables.scss";
+
+
+//HOWITWORKS END
+
+.quiz-section{
+    padding: 220px 0;
+    background-image: url('../../../../public/quiz-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .quiz-column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h5{
+        color: $brand-primary;
+    }
+}

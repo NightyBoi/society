@@ -1,0 +1,140 @@
+@import "../../variables.scss";
+
+.howitworks{
+    padding: 40px 0;
+    background-color: #F8F8F8;
+
+    h5, p{
+        margin-bottom: 0;
+        color: $brand-primary;
+    }
+
+    p{
+        min-width: 750px;
+        max-width: 750px;
+        font-weight: 400;
+    }
+
+    .howitworks-layout{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .step-specific{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    
+    .step-layout{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-right: 16px;
+    }
+}
+
+.whiten{
+    background-color: white !important;
+}
+
+.step{
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $brand-secondary;
+    border-radius: 50px;
+    margin-right: 16px;
+    position: relative;
+
+    h5{
+        color: white;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+}
+
+.step-last{
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $brand-secondary;
+    border-radius: 50px;
+    margin-right: 16px;
+    position: relative;
+
+    h5{
+        color: white;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+}
+
+.step::after{
+    content: "";
+    height: 50px;
+    width: 1px;
+    position: absolute;
+    top: 50px;
+    border-left: 1px dashed $brand-secondary;
+    left: 25px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .howitworks{
+        p{
+            max-width: 500px;
+            min-width: 500px;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .howitworks{
+        p{
+            max-width: 350px;
+            min-width: 350px;
+        }
+    }
+
+    .step::after{
+        content: "";
+        height: 80px;
+        width: 1px;
+        position: absolute;
+        top: 50px;
+        border-left: 1px dashed $brand-secondary;
+        left: 25px;
+    }
+  }
+
+  
+@media only screen and (max-width: 768px) {
+    .howitworks{
+        .step-specific{
+            flex-wrap: wrap;
+        }
+
+        p{
+            max-width: 100%;
+            width: 100%;
+            min-width: 0;
+            margin-top: 16px;
+        }
+    }
+
+    .step::after{
+        content: none;
+    }
+  }

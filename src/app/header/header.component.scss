@@ -1,0 +1,77 @@
+@import "../../variables.scss";
+
+.headerLayout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px 0;
+}
+
+.visibleDropdown{
+    display: flex;
+}
+
+.headerLayout a{
+    color: $brand-primary;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.dropdown-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.dropdown-menu{
+    flex-direction: row;
+    align-items: flex-start;
+    border: 1px solid #D4D4D4;
+    border-radius: 0;
+    top: 55px;
+}
+
+.dropdown-subitem{
+    font-weight: 500;
+}
+
+.dropdown-item{
+    padding: 14px 32px;
+}
+
+.dropdown-item:active{
+    background-color: white;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown{
+    padding: 0 16px;
+}
+
+.underline{
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
+}
+
+.logo{
+    max-width: 120px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mainLink{
+    padding: 40px 0;
+}
+

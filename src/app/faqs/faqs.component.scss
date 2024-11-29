@@ -1,0 +1,76 @@
+@import "../../variables.scss";
+
+.faq-section{
+    padding: 40px 0;
+    background: rgb(248,248,248);
+    background: linear-gradient(0deg, rgba(248,248,248,1) 90%, rgba(233,233,233,.7) 100%);
+}
+
+.col-12{
+    a{
+        text-decoration: underline;
+    }
+
+    a, p{
+        color: $brand-primary
+    }
+}
+
+.search{
+    margin-top: 24px;
+    border: none;
+    border-bottom: 1px solid $brand-primary;
+    background-color: transparent;
+    max-width: 100%;
+    width: 300px;
+    padding: 8px 0;
+    padding-bottom: 4px;
+    padding-right: 32px;
+    background-image: url("../../../public/search.png");
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 5px);
+    background-position-y: 65%;
+}
+
+.search:focus-visible{
+    outline: none;
+}
+
+.search::placeholder{
+    font-weight: 400;
+    color: #ABABAB;
+}
+
+.category-heading{
+    text-transform: uppercase;
+    color: $brand-primary;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 40px;
+    margin-bottom: 24px;
+
+    button{
+        border: none;
+        background-color: transparent;
+        color: $brand-primary;
+        padding-left: 0;
+        margin-bottom: 8px;
+    }
+
+    button[disabled]{
+        color: #ABABAB;
+        font-weight: 400;
+    }
+}
+
+.faq-list{
+    background-color: white;
+    padding: 40px;
+}

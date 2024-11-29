@@ -1,0 +1,100 @@
+<div class="container-fluid" (mouseleave)="toggleDropdown(0)">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 headerLayout">
+                <div>
+                    <img routerLink="/" src="logo.png" class="logo">
+                </div>
+                <div class="links d-none d-lg-flex">
+                    <div class="dropdown show">
+                        <a class="mainLink" (mouseenter)="toggleDropdown(1)" [class.underline]="selectedDropdown == 1" routerLink="/services" role="button" id="dropdownMenuLink">
+                          Services <i class="fa-solid" [class.fa-angle-down]="selectedDropdown != 1" [class.fa-angle-up]="selectedDropdown == 1"></i>
+                        </a>
+                      
+                        <div class="dropdown-menu" [class.visibleDropdown]="selectedDropdown == 1">
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" routerLink="/services/dermatology">Dermatology</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Anti-Aging</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Acne</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Rosacea</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Melasma</a>
+                            </div>
+
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" href="#">Hair Loss</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Topical</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Oral</a>
+                            </div>
+
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" href="#">Weight Loss (coming soon)</a>
+                                <a class="dropdown-item" href="#">ED & PE (coming soon)</a>
+                                <a class="dropdown-item" href="#">Mental Health (coming soon)</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown show">
+                        <a class="mainLink" (mouseenter)="toggleDropdown(2)" [class.underline]="selectedDropdown == 2" href="#" role="button" id="dropdownMenuLink">
+                            How It Works <i class="fa-solid" [class.fa-angle-down]="selectedDropdown != 2" [class.fa-angle-up]="selectedDropdown == 2"></i>
+                        </a>
+                      
+                        <div class="dropdown-menu" [class.visibleDropdown]="selectedDropdown == 2">
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Step by step process</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Online assesment form</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Doctor interection</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown show">
+                        <a class="mainLink" (mouseenter)="toggleDropdown(3)" [class.underline]="selectedDropdown == 3" routerLink="/about" role="button" id="dropdownMenuLink">
+                            About <i class="fa-solid" [class.fa-angle-down]="selectedDropdown != 3" [class.fa-angle-up]="selectedDropdown == 3"></i>
+                        </a>
+                      
+                        <div class="dropdown-menu" [class.visibleDropdown]="selectedDropdown == 3">
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" style="font-weight: 400;" routerLink="/about">About the brand</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Our doctors</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Medical credibility</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Compliance / Disclaimers</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown show">
+                        <a class="mainLink" (mouseenter)="toggleDropdown(4)" [class.underline]="selectedDropdown == 4" href="#" role="button" id="dropdownMenuLink">
+                            Results <i class="fa-solid" [class.fa-angle-down]="selectedDropdown != 4" [class.fa-angle-up]="selectedDropdown == 4"></i>
+                        </a>
+                      
+                        <div class="dropdown-menu" [class.visibleDropdown]="selectedDropdown == 4">
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Before and after gallery</a>
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Customer reviews</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown show">
+                        <a class="mainLink" (mouseenter)="toggleDropdown(5)" [class.underline]="selectedDropdown == 5" href="#" role="button" id="dropdownMenuLink">
+                            Resources <i class="fa-solid" [class.fa-angle-down]="selectedDropdown != 5" [class.fa-angle-up]="selectedDropdown == 5"></i>
+                        </a>
+                      
+                        <div class="dropdown-menu" [class.visibleDropdown]="selectedDropdown == 5">
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" style="font-weight: 400;" href="#">Insightful articles</a>
+                                <a class="dropdown-item" style="font-weight: 400;" routerLink="/faq">FAQs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button routerLink="/signup" class="primary-button">Get Started</button>
+                        <button routerLink="/login" class="secondary-button">Log In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+@import "../../variables.scss";
+
+.result-section{
+    background-color: #F8F8F8;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.whiten{
+    background-color: white !important;
+}
+
+.heading-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.review-img{
+    max-width: 100%;
+}
+
+.review-title{
+    font-weight: 700;
+    color: $brand-primary;
+}
+
+.review-desc{
+    font-weight: 400;
+    font-size: .9rem;
+    color: $brand-primary;
+}
+
+.review-layout{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.quote{
+    margin: 24px 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .review-layout{
+        align-items: center;
+        text-align: center;
+    }
+
+    .heading-btn{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1{
+            text-align: center;
+        }
+    }
+  }

@@ -1,0 +1,65 @@
+<div class="container-fluid faq-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>FAQs</h1>
+
+                <accordion [isAnimated]="true" [closeOthers]="true">
+                    <accordion-group style="position: relative;">
+                        <button
+                        class="btn btn-block justify-content-between d-flex w-100 "
+                        accordion-heading type="button" (click)="changeSelection(1)">
+                            <div class="pull-left float-left">What is Society?</div>
+                            <span class="float-right pull-right"><i class="fa-solid fa-angle-down" [class.fa-angle-down]="currentSelection != 1" [class.fa-angle-up]="currentSelection == 1"></i></span>
+                        </button>
+                        Society is a telehealth platform that connects you with licensed dermatology providers for personalized skin assessments and prescriptions. This allows you to receive expert skincare guidance and treatment from the comfort of your home.
+                    </accordion-group>
+                    <accordion-group style="position: relative;">
+                        <button
+                        class="btn btn-block justify-content-between d-flex w-100 "
+                        accordion-heading type="button" (click)="changeSelection(2)">
+                            <div class="pull-left float-left">How does telehealth work with Society?</div>
+                            <span class="float-right pull-right"><i class="fa-solid fa-angle-down" [class.fa-angle-down]="currentSelection != 2" [class.fa-angle-up]="currentSelection == 2"></i></span>
+                        </button>
+                        Society’s telehealth service connects you with licensed dermatology providers through a secure, online platform. After creating your profile, you’ll complete a health and skin questionnaire, upload photos, and describe your skin concerns. A provider will then review your information and prescribe a custom treatment plan tailored to your needs.
+                    </accordion-group>
+                    <accordion-group style="position: relative;">
+                        <button
+                        class="btn btn-block justify-content-between d-flex w-100 "
+                        accordion-heading type="button" (click)="changeSelection(3)">
+                            <div class="pull-left float-left">Who are the healthcare providers on the Society Health platform?</div>
+                            <span class="float-right pull-right"><i class="fa-solid fa-angle-down" [class.fa-angle-down]="currentSelection != 3" [class.fa-angle-up]="currentSelection == 3"></i></span>
+                        </button>
+                        Our dermatology providers are licensed professionals with extensive experience in skin care. We match you with a provider licensed in your state who will oversee your treatment and be available to answer questions.
+                    </accordion-group>
+                    <accordion-group style="position: relative;">
+                        <button
+                        class="btn btn-block justify-content-between d-flex w-100 "
+                        accordion-heading type="button" (click)="changeSelection(4)">
+                            <div class="pull-left float-left">Is telehealth effective for skin conditions?</div>
+                            <span class="float-right pull-right"><i class="fa-solid" [class.fa-angle-down]="currentSelection != 4" [class.fa-angle-up]="currentSelection == 4"></i></span>
+                        </button>
+                        Yes, telehealth can be highly effective for diagnosing and treating common skin concerns like acne, aging, and hyperpigmentation. Society’s licensed providers use detailed questionnaires and photos to create customized treatments that address your specific concerns, just as they would in an in-person visit.
+                    </accordion-group>
+                    <accordion-group class="last-accordion" style="position: relative;">
+                        <button
+                        class="btn btn-block justify-content-between d-flex w-100 "
+                        accordion-heading type="button" (click)="changeSelection(5)">
+                            <div class="pull-left float-left">What if I have a reaction to my medication?</div>
+                            <span class="float-right pull-right"><i class="fa-solid fa-angle-down" [class.fa-angle-down]="currentSelection != 5" [class.fa-angle-up]="currentSelection == 5"></i></span>
+                        </button>
+                        If you experience a reaction, stop using the product and reach out to your Society provider immediately. Our team can adjust your treatment plan and may prescribe alternative ingredients to better suit your skin’s sensitivity.
+                    </accordion-group>
+                  </accordion>
+
+                  <div class="cta-line">
+                    <button routerLink="/faq" class="primary-button">See More <i style="margin-left: 8px;" class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+
+            </div>
+            <div class="col-md-6">
+                <img src="faq.png">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+@import "../../../variables.scss";
+
+.doctors-section{
+    padding: 40px 0;
+
+    p{
+        font-weight: 400;
+        color: $brand-primary;
+    }
+
+    li{
+        font-weight: 400;
+    }
+
+    .doctors-paragraph{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .doctor-img{
+        width: 100%;
+    }
+    
+    .doctor-name{
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .doctor-title{
+        font-size: .9rem;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    .doctor-desc{
+        font-size: .9rem;
+        font-weight: 400;
+        color: #788D9E;
+    }
+    
+    .doctor-panel{
+        margin-bottom: 24px;
+    }
+}
+
+accordion-group{
+    button{
+        border: none;
+        align-items: center;
+    }
+
+    p{
+        color: $brand-primary;
+    }
+
+    ::ng-deep{
+        .panel{
+            border: none !important;
+        }
+
+        button{
+            text-decoration: none;
+            color: $brand-primary !important;
+            font-weight: 400;
+            padding-left: 0;
+            font-size: 1.25rem;
+            text-align: left;
+        }
+
+        .panel-heading{
+            margin-left: 0;
+            padding-left: 0;
+            background: transparent;
+            border: none;
+        }
+
+        .panel-body{
+            color: $brand-primary;
+            font-weight: 400;
+            margin-left: 0;
+            padding-left: 0;
+            font-size: .9rem;
+            padding-top: 0;
+        }
+    }
+}
+
+.col-doctors{
+    padding-top: 100px;
+}
+
+@media only screen and (max-width: 576px) {
+    .col-doctors{
+        padding-top: 0;
+    }
+  }

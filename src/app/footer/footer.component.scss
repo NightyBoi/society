@@ -1,0 +1,117 @@
+@import "../../variables.scss";
+
+.footer-section{
+    padding: 40px 0;
+    background-color: $brand-primary;
+
+    h5{
+        color: #C7D9E5;
+        margin-bottom: 32px;
+        cursor: pointer;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    .about-p{
+        color: white;
+        font-size: .9rem;
+        font-weight: 400;
+        margin-top: 24px;
+    }
+
+    .footer-email{
+        width: 100%;
+        border-radius: 32px;
+        padding: 10px 20px;
+        padding-right: 30px;
+        border: none;
+        color: $brand-primary;
+        background-image: url("../../../public/right.png");
+        background-position-x: calc(100% - 10px);
+        background-position-y: center;
+        background-repeat: no-repeat;
+    }
+
+    .footer-email::placeholder{
+        color: #B9C5CD;
+        font-weight: 300;
+    }
+
+    .col-md-2{
+        display: flex;
+    }
+}
+
+.footer-link-grp{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 0;
+}
+
+.col-left{
+    justify-content: flex-start;
+}
+
+.col-right{
+    justify-content: flex-end;
+}
+
+.copyright-row{
+    border-top: 1px solid #D4D4D4;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+
+    p{
+        color: #D4D4D4;
+        font-weight: 400;
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    img{
+        margin: 0 12px;
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .copyright-row{
+        flex-direction: column;
+    }
+
+    .footer-link-grp{
+        margin-top: 24px;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col-left{
+        justify-content: center;
+    }
+
+    .col-right{
+        justify-content: center;
+    }
+}

@@ -1,0 +1,52 @@
+@import "../../variables.scss";
+
+.howitworks-section{
+    padding: 40px 0;
+
+    img{
+        max-width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .howitworks-p{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .box{
+        height: 50px;
+        width: 50px;
+        min-width: 50px;
+        background-color: #C7D9E5;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 16px;
+
+        h4{
+            color: white;
+            margin-bottom: 0;
+            font-weight: 900;
+        }
+    }
+
+    .step-title{
+        font-weight: 400;
+        color: $brand-primary;
+    }
+
+    .step-desc{
+        color: $brand-primary;
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+
+    .cta-line{
+        margin-top: 36px;
+        display: flex;
+        justify-content: center;
+    }
+}

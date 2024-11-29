@@ -1,0 +1,101 @@
+<div class="container-fluid product-section">
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-12">
+                    <p><a routerLink="/services">Services</a> > <a routerLink="/services/dermatology">Dermatology</a> > <a>Acne treatment</a> > <a routerLink="/products">Tretinoin cream</a></p>
+                </div>
+            <div class="col-md-6">
+                <carousel [isAnimated]="true" [(activeSlide)]="activeIndex">
+                    <slide>
+                        <img src="products/tretinoin-1.png" alt="first slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="products/tretinoin-2-small.png" alt="second slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="products/tretinoin-3-small.png" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="products/tretinoin-4-small.png" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                </carousel>
+                <div class="small-images">
+                    <img (click)="switchIndex(0)" src="products/tretinoin-1-small.png">
+                    <img (click)="switchIndex(1)" src="products/tretinoin-2-small.png">
+                    <img (click)="switchIndex(2)" src="products/tretinoin-3-small.png">
+                    <img (click)="switchIndex(3)" src="products/tretinoin-4-small.png">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="product-title">Tretinoin cream</h2>
+                <div class="badge-status"><div class="badger"></div><p>In Stock</p></div>
+
+                <h5 class="price">from <span>$58</span> $42 / 2 months</h5>
+
+                <p class="discount">25% off first order</p>
+
+                <p class="product-description">A prescription dark spot corrector cream packed with hydroquinone and powerful ingredients that treat melasma, fade dark spots, and brighten the complexion.</p>
+
+                <ul style="margin-top: 24px;">
+                    <li>
+                        <img src="medal.png"> US-licensed healthcare providers
+                    </li>
+                    <li>
+                        <img src="user.png"> Dermatologist-designed program
+                    </li>
+                    <li>
+                        <img src="box.png"> Free shipping
+                    </li>
+                    <li>
+                        <img src="calendar.png"> Shipped monthly. Billed quarterly.
+                    </li>
+                </ul>
+
+                <div class="buttons">
+                    <button class="secondary-button">Request Consultation</button>
+                    <button style="width: 48%;" class="primary-button">Add To Cart</button>
+                </div>
+
+                <accordion [isAnimated]="true" [closeOthers]="true">
+                    <accordion-group style="position: relative;">
+                        <button
+                        class="btn btn-block justify-content-between d-flex w-100 "
+                        accordion-heading type="button" (click)="changeSelection(1)">
+                            <div class="pull-left float-left">Formulations</div>
+                            <span class="float-right pull-right"><i class="fa-solid fa-angle-down" [class.fa-angle-down]="currentSelection != 1" [class.fa-angle-up]="currentSelection == 1"></i></span>
+                        </button>
+                        <ul class="formula-list">
+                            <li>Hydroquinone 12%</li>
+                            <li>Niacinamide 2%</li>
+                            <li>Hydrocortisone 1% (for Initial 2-month only)</li>
+                            <li>Hydroquinone 6%</li>
+                            <li>Vitamin C 1%</li>
+                            <li>Tranexamic Acid 6%</li>
+                            <li>Azelaic Acid 10%</li>
+                            <li>Tretinoin 0.05%</li>
+                        </ul>
+                        <p>Prescription is not guaranteed. Our doctors will evaluate your medical history and skin condition to determine the best treatment plan.</p>
+                    </accordion-group>
+                    <accordion-group class="last-accordion" style="position: relative;" [isOpen]="true">
+                        <button
+                        class="btn btn-block justify-content-between d-flex w-100 "
+                        accordion-heading type="button" (click)="changeSelection(2)">
+                            <div class="pull-left float-left">How It Works</div>
+                            <span class="float-right pull-right"><i class="fa-solid fa-angle-down" [class.fa-angle-down]="currentSelection != 2" [class.fa-angle-up]="currentSelection == 2"></i></span>
+                        </button>
+                        <ul class="formula-list">
+                            <li>Prevents the formation of excess melanin</li>
+                            <li>Reduces inflammation</li>
+                            <li>Improves skin structure</li>
+                            <li>Dermatologist-formulated with concentrated prescription ingredients</li>
+                            <li>Freshly compounded at the pharmacy, ensuring maximum efficacy</li>
+                        </ul>
+                    </accordion-group>
+                    
+                  </accordion>
+            </div>
+        </div>
+    </div>
+</div>

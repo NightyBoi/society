@@ -1,0 +1,15 @@
+<h2>{{faqTitle}}</h2>
+
+<accordion [isAnimated]="true" [closeOthers]="true">
+    @for (item of faqSource; track $index) {
+        <accordion-group style="position: relative;">
+            <button
+            class="btn btn-block justify-content-between d-flex w-100 "
+            accordion-heading type="button" (click)="changeSelection($index)">
+                <div class="pull-left float-left">{{item.question}}</div>
+                <span class="float-right pull-right"><i class="fa-solid fa-angle-down" [class.fa-angle-down]="currentSelection != $index" [class.fa-angle-up]="currentSelection == $index"></i></span>
+            </button>
+            <div class="answer" [innerHTML]="item.answer"></div>
+        </accordion-group>
+    }
+  </accordion>

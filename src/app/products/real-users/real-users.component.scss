@@ -1,0 +1,27 @@
+.real-users-section{
+    background-color: #F8F8F8;
+    padding: 40px 0;
+}
+
+h1{
+    font-weight: 700;
+}
+
+.reels{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img{
+        height: 385px;
+        width: 228px;
+        margin-bottom: 8px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .reels{
+        justify-content: center;
+    }
+  }

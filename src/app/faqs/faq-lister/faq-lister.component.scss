@@ -1,0 +1,62 @@
+@import "../../../variables.scss";
+
+h2{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    color: $brand-primary;
+    margin-bottom: 24px;
+}
+
+.last-accordion{
+    ::ng-deep{
+        .panel{
+            border: none !important;
+        }
+    }
+}
+
+accordion-group{
+    ::ng-deep{
+        .panel{
+            border: none !important;
+            border-bottom: 1px solid #D4D4D4 !important;
+            border-radius: 0;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        button{
+            text-decoration: none;
+            color: $brand-primary !important;
+            font-weight: 400;
+            padding-left: 0;
+            font-size: 1.25rem;
+            text-align: left;
+        }
+
+        .panel-heading{
+            margin-left: 0;
+            padding-left: 0;
+            background: transparent;
+            border: none;
+        }
+
+        .panel-body{
+            color: $brand-primary;
+            font-weight: 400;
+            margin-left: 0;
+            padding-left: 0;
+            font-size: .9rem;
+            padding-top: 0;
+
+            li{
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.answer{
+    font-weight: 400;
+    color: $brand-primary;
+}

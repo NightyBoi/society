@@ -1,0 +1,29 @@
+<div class="heading">
+    <h1>{{productsTitle}}</h1>
+    <button class="primary-button">{{buttonLabel}} <i style="margin-left: 8px;" class="fa-solid fa-arrow-right"></i></button>
+</div>
+
+<div class="swiper-slider">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+       @for (item of products; track $index) {
+        <div class="swiper-slide">
+          <a routerLink="/products">
+            <div>
+              <img [src]="item.imagePath">
+              <h5>{{item.name}}</h5>
+              <p class="price">{{item.price}}</p>
+              <p class="small-desc">{{item.description}}</p>
+
+              @if (wider) {
+                <div>
+                  <button class="secondary-button">Learn More</button>
+                </div>
+              }
+            </div>
+          </a>  
+        </div>
+       }
+    </div>
+  </div>

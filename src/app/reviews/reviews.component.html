@@ -1,0 +1,50 @@
+<div class="container-fluid result-section" [class.whiten]="whiten" id="results">
+    <div class="container">
+        <div class="row">
+            <div class="heading-btn" style="margin-bottom: 24px;">
+                <h1>{{reviewsTitle}}</h1>
+                <button routerLink="/products/" [fragment]="'reviewList'" class="primary-button">See All Reviews <i style="margin-left: 8px;" class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="col-md-3">
+                <div class="review-layout">
+                    <img class="review-img" [src]="reviews[0].imagePath">
+                    <div>
+                        <img class="quote" src="quote.png">
+                    </div>
+                    <p class="review-title">{{reviews[0].title}}</p>
+                    <p class="review-desc">{{reviews[0].description}}</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="review-layout">
+                    <img class="review-img" [src]="reviews[1].imagePath">
+                    <div>
+                        <img class="quote" src="quote.png">
+                    </div>
+                    <p class="review-title">{{reviews[1].title}}</p>
+                    <p class="review-desc">{{reviews[1].description}}</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="review-layout">
+                    <img class="review-img" [src]="reviews[2].imagePath">
+                    <div>
+                        <img class="quote" src="quote.png">
+                    </div>
+                    <p class="review-title">{{reviews[2].title}}</p>
+                    <p class="review-desc">{{reviews[2].description}}</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="review-layout">
+                    <img class="review-img" [src]="reviews[3].imagePath">
+                    <div>
+                        <img class="quote" src="quote.png">
+                    </div>
+                    <p class="review-title">{{reviews[3].title}}</p>
+                    <p class="review-desc">{{reviews[3].description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

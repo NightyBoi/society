@@ -1,0 +1,57 @@
+@import "../../../variables.scss";
+
+p, h5{
+    color: $brand-primary;
+}
+
+.ingredients-section{
+    background-color: #FFF;
+    padding-bottom: 40px;
+}
+
+.ingredient{
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px;
+
+    img{
+        width: 165px;
+        max-width: 100%;
+    }
+}
+
+.ing-row{
+    padding-top: 32px;
+}
+
+.upper-title{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.ing-desc{
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+
+.ing-info{
+    color: $brand-primary;
+    font-weight: 600;
+}
+
+.benefit-p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.benefit-desc{
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.2rem;
+}

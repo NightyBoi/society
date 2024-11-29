@@ -1,0 +1,66 @@
+@import "../../../variables.scss";
+
+.lander-section{
+    padding: 40px 0;
+    background: rgb(247,247,247);
+    background: linear-gradient(0deg, rgba(247,247,247,0) 70%, rgba(233,233,233,.5) 100%);
+
+    .col-12{
+        p, a{
+            color: $brand-primary;
+            font-size: .9rem;
+        }
+        
+    }
+
+    .landing-img{
+        max-width: 100%;
+        margin-bottom: 16px;
+    }
+
+    h1 span{
+        color: $brand-secondary;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 700;
+    }
+
+    .paragraph{
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    
+    .contentColumn{
+        padding-top: 36px;
+    }
+    
+    .paragraphContent{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        h3{
+            color: $brand-primary;
+        }
+
+        p{
+            font-weight: 400;
+            color: $brand-primary;
+        }
+    }
+
+    i{
+        font-size: 20px;
+        margin-top: 6px;
+        margin-right: 16px;
+        color: $brand-primary;
+    }
+
+    .cta-line{
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+    }
+
+}

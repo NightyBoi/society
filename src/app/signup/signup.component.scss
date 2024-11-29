@@ -1,0 +1,158 @@
+@import "../../variables.scss";
+
+.login-section{
+    background: rgb(240,245,255);
+    background: linear-gradient(0deg, rgba(240,245,255,1) 70%, rgba(233,233,233,.8) 100%);
+}
+
+.login-image{
+    width: 100%;
+    max-width: 100%;
+}
+
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+
+.login-form-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.login-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+    }
+
+    a:hover{
+        h5{
+            border: 1px solid $brand-primary;
+        }
+    }
+
+    h5{
+        border: 1px solid #B9C5CD;
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 4px;
+        color: $brand-primary;
+    }
+}
+
+.row{
+    align-items: center;
+}
+
+.email-p{
+    color: $brand-primary;
+    margin-top: 16px;
+}
+
+.field-block{
+    margin-top: 16px;
+}
+
+.login-form{
+    max-width: 520px;
+    width: 100%;    
+}
+
+.login-label{
+    font-weight: 700;
+    color: $brand-primary;
+}
+
+.login-field{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #788D9E;
+    background-color: transparent;
+    padding: 10px 20px;
+    color: $brand-primary;
+}
+
+.login-field::placeholder{
+    color: #B9C5CD;
+    font-weight: 400;
+}
+
+.checkbox-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    p{
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+.checkbox-field{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.link{
+    color: $brand-primary;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+button h5{
+    display: inline;
+}
+
+.primary-button{
+    max-width: 260px;
+    width: 100%; 
+}
+
+.cta-line{
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+
+    p{
+        font-weight: 400;
+    }
+
+    a{
+        color: $brand-primary;
+        font-weight: 700;
+    }
+}
+
+.col-md-6{
+    padding: 0;
+}
+
+.row{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.consultation{
+    margin-top: 24px;
+    text-align: center;
+    font-weight: 400;
+    font-style: italic;
+    width: 100%;
+    font-size: .9rem;
+    max-width: 520px;
+}

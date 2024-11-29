@@ -1,0 +1,48 @@
+@import "../../variables.scss";
+
+.curology-section{
+    background-image: url("../../../public/curology-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding-top: 50px;
+    padding-bottom: 600px;
+
+    h4, p{
+        color: $brand-primary;
+    }
+
+    h4{
+        font-weight: 700;
+    }
+
+    .curology-p{
+        max-width: 510px;
+        width: 100%;
+        font-weight: 400;
+    }
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+
+    li{
+        color: $brand-primary;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+
+    img{
+        margin-right: 8px;
+        width: 17px;
+        height: 17px;
+        margin-top: -3px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .curology-section{
+        padding-bottom: 50px;
+    }
+}

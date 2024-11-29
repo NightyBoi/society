@@ -1,0 +1,67 @@
+@import "../../variables.scss";
+
+.faq-section{
+    padding: 40px 0;
+
+    img{
+        max-width: 100%;
+    }
+
+    button{
+        div{
+            font-weight: 400;
+        }
+
+        border: none;
+    }
+
+    .cta-line{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
+}
+
+.last-accordion{
+    ::ng-deep{
+        .panel{
+            border: none !important;
+        }
+    }
+}
+
+accordion-group{
+    ::ng-deep{
+        .panel{
+            border: none !important;
+            border-bottom: 1px solid #D4D4D4 !important;
+        }
+
+        button{
+            text-decoration: none;
+            color: $brand-primary !important;
+            font-weight: 400;
+            padding-left: 0;
+            font-size: 1.25rem;
+            text-align: left;
+        }
+
+        .panel-heading{
+            margin-left: 0;
+            padding-left: 0;
+            background: transparent;
+            border: none;
+        }
+
+        .panel-body{
+            color: $brand-primary;
+            font-weight: 400;
+            margin-left: 0;
+            padding-left: 0;
+            font-size: .9rem;
+            padding-top: 0;
+        }
+    }
+}

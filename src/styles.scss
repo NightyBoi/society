@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap";
+@import "./variables.scss";
+
+*{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    color: $brand-primary;
+    font-size: calc(1.375rem + 1.6vw);
+}
+
+.primary-button{
+    background-color: $brand-primary;
+    color: white;
+    border-radius: 24px;
+    border: 1px solid $brand-primary;
+    padding: 10px 20px;
+}
+
+.secondary-button{
+    border: 1px solid $brand-primary;
+    background-color: transparent;
+    border-radius: 24px;
+    padding: 10px 20px;
+    margin-left: 16px;
+}
+
+.primary-button:hover{
+    background-color: #788D9E;
+    border: 1px solid #788D9E;
+}
+
+.primary-button:disabled, primary-button[disabled]{
+    background-color: #F0F0F0;
+    border-color: #F0F0F0;
+}
+

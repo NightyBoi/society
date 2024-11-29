@@ -1,0 +1,47 @@
+<div class="container-fluid login-section">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="login-image" src="login.png">
+        </div>
+        <div class="col-md-6">
+            <div class="login-form-section">
+                <h1 style="margin-top: 24px;">Welcome Back</h1>
+                <div class="login-social">
+                    <a href="#"><h5><i class="fa-brands fa-facebook-f"></i></h5></a>
+                    <a href="#"><h5><i class="fa-brands fa-google"></i></h5></a>
+                    <a href="#"><h5><i class="fa-brands fa-linkedin-in"></i></h5></a>
+                </div>
+                <p class="email-p">or use your email account</p>
+
+                <form #loginForm="ngForm" (ngSubmit)="submitLogin(loginForm)" class="login-form">
+                    <div class="field-block">
+                        <label class="login-label" for="email">Email<span style="color: #AD1A23">*</span></label>
+                        <input ngModel required class="login-field" type="email" placeholder="example@gmail.com" name="email">
+                    </div>
+
+                    <div class="field-block">
+                        <label class="login-label" for="email">Password<span style="color: #AD1A23">*</span></label>
+                        <input ngModel required class="login-field" type="password" placeholder="********" name="password">
+                    </div>
+
+                    <div class="checkbox-block">
+                        <div class="checkbox-field">
+                            <input ngModel type="checkbox" name="remember">
+                            <p class="checkbox">Remember password</p>
+                        </div>
+                        <a class="link" href="#">Forgot password</a>
+                    </div>
+
+                    <div class="cta-line">
+                        <button type="submit" class="primary-button"><h5>Sign In </h5><i style="margin-left: 8px;" class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="cta-line">
+                        <p>Don't have an account? <a routerLink="/signup">Sign up</a></p>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

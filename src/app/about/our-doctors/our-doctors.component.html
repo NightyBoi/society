@@ -1,0 +1,160 @@
+<div class="container-fluid doctors-section" id="doctors" #doctors>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h1>Meet Our Doctors</h1>
+                <p class="doctors-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.</p>
+                <ul>
+                    <li>Dermatology</li>
+                    <li>Hair loss</li>
+                    <li>Weight loss</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="doctor-panel">
+                    <img class="doctor-img" src="doctors/doctor-1.png">
+                    <accordion [isAnimated]="true">
+                        <accordion-group style="position: relative;" [isOpen]="doctorActive[0]">
+                            <button
+                            class="btn btn-block justify-content-between d-flex w-100 "
+                            accordion-heading type="button" (click)="changeSelection(0)">
+                                <div class="pull-left float-left">
+                                    <p class="doctor-name">Dr. James Hall, PhD</p>
+                                    <p class="doctor-title">Advisor - Obesity</p>
+                                </div>
+                                <span class="float-right pull-right"><i class="fa-solid" [class.fa-minus]="doctorActive[0]" [class.fa-plus]="!doctorActive[0]"></i></span>
+                            </button>
+                            <p class="doctor-desc">
+                                Distinguished Professor at the Indiana University School of Public Health-Bloomington.
+                            </p>
+                            <p class="doctor-desc" style="margin-bottom: 0;">
+                                David is acting as an independent consultant to Ro and not on behalf of or representing Indiana University or any other organization.
+                            </p>
+                        </accordion-group>
+                      </accordion>  
+                </div>
+
+                <div class="doctor-panel">
+                    <img class="doctor-img" src="doctors/doctor-2.png">
+                    <accordion [isAnimated]="true">
+                        <accordion-group style="position: relative;" [isOpen]="doctorActive[1]">
+                            <button
+                            class="btn btn-block justify-content-between d-flex w-100 "
+                            accordion-heading type="button" (click)="changeSelection(1)">
+                                <div class="pull-left float-left">
+                                    <p class="doctor-name">Dr. Rhonda Rhodes, PhD</p>
+                                    <p class="doctor-title">Advisor - Sexual Health</p>
+                                </div>
+                                <span class="float-right pull-right"><i class="fa-solid" [class.fa-minus]="doctorActive[1]" [class.fa-plus]="!doctorActive[1]"></i></span>
+                            </button>
+                            <p class="doctor-desc">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
+                            </p>
+                            <p class="doctor-desc" style="margin-bottom: 0;">
+                                Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
+                            </p>
+                        </accordion-group>
+                      </accordion>  
+                </div>
+
+                <div class="doctor-panel">
+                    <img class="doctor-img" src="doctors/doctor-3.png">
+                    <accordion [isAnimated]="true">
+                        <accordion-group style="position: relative;" [isOpen]="doctorActive[2]">
+                            <button
+                            class="btn btn-block justify-content-between d-flex w-100 "
+                            accordion-heading type="button" (click)="changeSelection(2)">
+                                <div class="pull-left float-left">
+                                    <p class="doctor-name">Dr. Rhonda Rhodes, PhD</p>
+                                    <p class="doctor-title">Advisor - Sexual Health</p>
+                                </div>
+                                <span class="float-right pull-right"><i class="fa-solid" [class.fa-minus]="doctorActive[2]" [class.fa-plus]="!doctorActive[2]"></i></span>
+                            </button>
+                            <p class="doctor-desc">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
+                            </p>
+                            <p class="doctor-desc" style="margin-bottom: 0;">
+                                Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
+                            </p>
+                        </accordion-group>
+                      </accordion>  
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-doctors">
+                
+                <div class="doctor-panel">
+                    <img class="doctor-img" src="doctors/doctor-4.png">
+                    <accordion [isAnimated]="true">
+                        <accordion-group style="position: relative;" [isOpen]="doctorActive[3]">
+                            <button
+                            class="btn btn-block justify-content-between d-flex w-100 "
+                            accordion-heading type="button" (click)="changeSelection(3)">
+                                <div class="pull-left float-left">
+                                    <p class="doctor-name">Dr. Autumn Phillips, PhD</p>
+                                    <p class="doctor-title">Advisor - Dermatology</p>
+                                </div>
+                                <span class="float-right pull-right"><i class="fa-solid" [class.fa-minus]="doctorActive[3]" [class.fa-plus]="!doctorActive[3]"></i></span>
+                            </button>
+                            <p class="doctor-desc">
+                                Distinguished Professor at the Indiana University School of Public Health-Bloomington.
+                            </p>
+                            <p class="doctor-desc" style="margin-bottom: 0;">
+                                David is acting as an independent consultant to Ro and not on behalf of or representing Indiana University or any other organization.
+                            </p>
+                        </accordion-group>
+                      </accordion>  
+                </div>
+
+                <div class="doctor-panel">
+                    <img class="doctor-img" src="doctors/doctor-5.png">
+                    <accordion [isAnimated]="true">
+                        <accordion-group style="position: relative;" [isOpen]="doctorActive[4]">
+                            <button
+                            class="btn btn-block justify-content-between d-flex w-100 "
+                            accordion-heading type="button" (click)="changeSelection(4)">
+                                <div class="pull-left float-left">
+                                    <p class="doctor-name">Dr. David Elson, PhD</p>
+                                    <p class="doctor-title">Advisor - Psychology</p>
+                                </div>
+                                <span class="float-right pull-right"><i class="fa-solid" [class.fa-minus]="doctorActive[4]" [class.fa-plus]="!doctorActive[4]"></i></span>
+                            </button>
+                            <p class="doctor-desc">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
+                            </p>
+                            <p class="doctor-desc" style="margin-bottom: 0;">
+                                Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
+                            </p>
+                        </accordion-group>
+                      </accordion>  
+                </div>
+
+                <div class="doctor-panel" style="margin-bottom: 0;">
+                    <img class="doctor-img" src="doctors/doctor-6.png">
+                    <accordion [isAnimated]="true">
+                        <accordion-group style="position: relative;" [isOpen]="doctorActive[5]">
+                            <button
+                            class="btn btn-block justify-content-between d-flex w-100 "
+                            accordion-heading type="button" (click)="changeSelection(5)">
+                                <div class="pull-left float-left">
+                                    <p class="doctor-name">Dr. David Elson, PhD</p>
+                                    <p class="doctor-title">Advisor - Psychology</p>
+                                </div>
+                                <span class="float-right pull-right"><i class="fa-solid" [class.fa-minus]="doctorActive[5]" [class.fa-plus]="!doctorActive[5]"></i></span>
+                            </button>
+                            <p class="doctor-desc">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
+                            </p>
+                            <p class="doctor-desc" style="margin-bottom: 0;">
+                                Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
+                            </p>
+                        </accordion-group>
+                      </accordion>  
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

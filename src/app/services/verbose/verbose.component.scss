@@ -1,0 +1,21 @@
+@import "../../../variables.scss";
+
+.verbose-section{
+    background-color: #F8F8F8;
+    padding: 40px 0;
+
+    .row{
+        align-items: center;
+        margin-bottom: 48px;
+    }
+
+    p{
+        color: $brand-primary;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    img{
+        max-width: 100%;
+    }
+}

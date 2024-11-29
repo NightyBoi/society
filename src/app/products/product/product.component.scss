@@ -1,0 +1,203 @@
+@import "../../../variables.scss";
+
+carousel{
+    ::ng-deep{
+        .carousel-indicators{
+            display: none;
+        }
+
+        .carousel-control{
+            display: none;
+        }
+    }
+}
+
+.product-section{
+    padding: 40px 0;
+    background: rgb(247,247,247);
+    background: linear-gradient(0deg, rgba(247,247,247,0) 70%, rgba(233,233,233,.5) 100%);
+}
+
+.col-12{
+    p, a{
+        color: $brand-primary;
+        font-size: .9rem;
+    }
+
+    a{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+
+.small-images{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+
+    img{
+        width: 95px;
+        height: 95px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
+
+    img:hover{
+        border:2px solid #1854F9;
+    }
+}
+
+.product-title{
+    font-family: "Roboto", sans-serif;
+    color: $brand-primary;
+    font-weight: 700;
+}
+
+.badge-status{
+    width: 109px;
+    height: 28px;
+    background-color: #E0F5E9;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+
+    p{
+        margin-bottom: 0;
+        color: black;
+        font-size: .9rem;
+        line-height: 1rem;
+    }
+
+    .badger{
+        height: 8px;
+        width: 8px;
+        border-radius: 8px;
+        margin-right: 8px;
+        background-color: #0E8433;
+        z-index: 2;
+    }
+}
+
+.price{
+    color: $brand-primary;
+    font-weight: 500;
+    margin-top: 16px;
+
+    span{
+        color: #ABABAB;
+        text-decoration: line-through;
+        font-weight: 400;
+    }
+}
+
+.discount{
+    color: #ABABAB;
+    margin-top: 16px;
+}
+
+.product-description{
+    font-size: .9rem;
+    color: $brand-primary;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 24px;
+
+    li{
+        color: $brand-primary;
+        font-weight: 400;
+        margin-bottom: 8px;
+        font-size: .9rem;
+    }
+
+    img{
+        margin-right: 8px;
+    }
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.secondary-button{
+    width: 48%; 
+    margin-right: 4%
+}
+
+.primary-button{
+    width: 50%;
+}
+
+.last-accordion{
+    ::ng-deep{
+        .panel{
+            border: none !important;
+        }
+    }
+}
+
+.formula-list{
+    list-style: disc;
+    padding-left: 20px;
+    color: $brand-primary;
+}
+
+accordion{
+    border-top: 1px solid #D4D4D4 !important;
+    margin-top: 24px;
+}
+
+accordion-group{
+    button{
+        border: none;
+    }
+
+    p{
+        color: $brand-primary;
+    }
+
+    ::ng-deep{
+        .panel{
+            border: none !important;
+            border-bottom: 1px solid #D4D4D4 !important;
+        }
+
+        button{
+            text-decoration: none;
+            color: $brand-primary !important;
+            font-weight: 400;
+            padding-left: 0;
+            font-size: 1.25rem;
+            text-align: left;
+        }
+
+        .panel-heading{
+            margin-left: 0;
+            padding-left: 0;
+            background: transparent;
+            border: none;
+        }
+
+        .panel-body{
+            color: $brand-primary;
+            font-weight: 400;
+            margin-left: 0;
+            padding-left: 0;
+            font-size: .9rem;
+            padding-top: 0;
+        }
+    }
+}

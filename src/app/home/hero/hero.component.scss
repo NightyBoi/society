@@ -1,0 +1,75 @@
+@import "../../../variables.scss";
+
+h1{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    color: $brand-primary;
+    font-size: calc(1.375rem + 1.6vw);
+}
+
+.heroContainer{
+    background-image: url("../../../../public/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.heroMain{
+    padding: 190px 0px;
+}
+
+.heroMain p, .heroMain h6 {
+    color: $brand-primary;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+
+    li{
+        color: $brand-primary;
+        font-weight: 400;
+        margin-bottom: 8px;
+        font-size: .9rem;
+    }
+
+    img{
+        margin-right: 8px;
+    }
+}
+
+button{
+    margin-top: 18px;
+
+    i{
+        color: white;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 60px;
+  }
+
+  .swiper-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    img{
+        margin-right: 8px;
+    }
+  }
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+}

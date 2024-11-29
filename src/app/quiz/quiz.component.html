@@ -1,0 +1,143 @@
+<div class="container-fluid quiz-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="quiz">
+
+                    @if (quizProgress == 0) {
+                        <div class="start-div">
+                            <h2>Please Note</h2>
+                            <p>Currently, we don't ship to Alabama, Alaska, or Mississippi.</p>
+                            <img src="directions.png">
+                        </div>
+
+                        <div class="buttons">
+                            <button class="secondary-button">Get Help Now</button>
+                            <button class="primary-button" (click)="next(null, 0)">Continue</button>
+                        </div>
+                    }
+
+                    @if (quizProgress != 0) {
+                        <div class="above-progress">
+                            <button (click)="back()"><i style="margin-right: 8px;" class="fa-solid fa-angle-left"></i>Go back</button>
+                            <p>{{quizProgress > 16 ? 16 : quizProgress}}/16</p>
+                        </div>
+                        <div class="quiz-progress-wrapper">
+                            <div class="quiz-progress" [style.width]="(100/16) * (quizProgress > 16 ? 16 : quizProgress) + '%'"></div>
+                        </div>
+                    }
+
+                    @if (quizProgress > 16) {
+                        <div class="end-div">
+                            <h2>Thank you!</h2>
+                            <p>Your form has been successfully submitted. <br>Our team will review it and contact you soon.</p>
+                            <img src="thanks.png">
+                        </div>
+                    }
+
+                    @if (quizProgress != 0 && quizProgress < 17 && quizQuestions[quizProgress-1].type == '2-choice'){
+                        <h2 class="question">{{quizQuestions[quizProgress-1].question}}</h2>
+
+                        <div class="answers-2-choice">
+                            @for (item of quizQuestions[quizProgress-1].answers; track $index) {
+                                <button (click)="next([item], quizProgress-1)" [value]="item" class="quiz-button" [class.chosen]="userAnswers[quizProgress-1] && userAnswers[quizProgress-1].answers.includes(item)">{{item}}</button>
+                            }
+                        </div>
+                    }
+
+                    @if (quizProgress != 0 && quizProgress < 17 && quizQuestions[quizProgress-1].type == 'select'){
+                        <h2 class="question">{{quizQuestions[quizProgress-1].question}}</h2>
+
+                        <div class="answers-2-choice">
+                            @for (item of quizQuestions[quizProgress-1].answers; track $index) {
+                                <button (click)="chooseSelect(item)" [value]="item" class="quiz-select" [class.chosen]="(userAnswers[quizProgress-1] && userAnswers[quizProgress-1].answers.includes(item)) || selectedMultiple.includes(item)">{{item}}</button>
+                            }
+                        </div>
+                        <div class="select-comment">
+                            <p class="comment-title">{{quizQuestions[quizProgress-1].extraQuestion}}</p>
+                            <textarea #comment rows="4" class="comment-area" [placeholder]="quizQuestions[quizProgress-1].extra">{{userAnswers[quizProgress-1] ? userAnswers[quizProgress-1].extra : ""}}</textarea>
+                        </div>
+
+                        <div class="buttons">
+                            <button (click)="nextSelect(quizProgress-1, comment.value)" class="primary-button">Continue <i style="margin-left: 8px;" class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    }
+
+                    @if (quizProgress != 0 && quizProgress < 17 && quizQuestions[quizProgress-1].type == '2-choice-plus'){
+                        <h2 class="question">{{quizQuestions[quizProgress-1].question}}</h2>
+
+                        <div class="answers-2-choice">
+                                <button (click)="selectPlus()" value="Yes" class="quiz-button" [class.chosen]="yesSelected">Yes</button>
+                                <button (click)="next(['No'], quizProgress-1)" value="No" class="quiz-button" [class.chosen]="userAnswers[quizProgress-1] && userAnswers[quizProgress-1].answers.includes('No') && onlySelected">No</button>
+                        </div>
+
+                        @if (yesSelected) {
+                            <div class="select-comment">
+                                <textarea style="margin-top: 24px;" #comment rows="4" class="comment-area" [placeholder]="quizQuestions[quizProgress-1].extra">{{userAnswers[quizProgress-1] ? userAnswers[quizProgress-1].extra : ""}}</textarea>
+                            </div>
+
+                            <div class="buttons">
+                                <button (click)="nextComment(quizProgress-1, comment.value)" class="primary-button">Continue <i style="margin-left: 8px;" class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        }
+                    }
+
+                    @if (quizProgress != 0 && quizProgress < 17 &&  quizQuestions[quizProgress-1].type == 'list'){
+                        <h2 class="question" style="margin-bottom: 0;">{{quizQuestions[quizProgress-1].question}}</h2>
+
+                        <div class="select-comment">
+                            <p class="comment-title">{{quizQuestions[quizProgress-1].extraQuestion}}</p>
+                            <textarea #comment rows="4" class="comment-area" [placeholder]="quizQuestions[quizProgress-1].extra">{{userAnswers[quizProgress-1] ? userAnswers[quizProgress-1].extra : ""}}</textarea>
+                        </div>
+
+                        <div class="buttons">
+                            <button (click)="nextComment(quizProgress-1, comment.value)" class="primary-button">Continue <i style="margin-left: 8px;" class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    }
+
+                    @if (quizProgress != 0 && quizProgress < 17 && quizQuestions[quizProgress-1].type == 'measure') {
+                        <h2 class="question" style="margin-bottom: 0;">{{quizQuestions[quizProgress-1].question}}</h2>
+                        <p class="additional">Fields marked with <span class="required-star">*</span> are required</p>
+                        
+                        <div class="form-field">
+                            <p style="margin-bottom: 0;">Height<span class="required-star">*</span></p>
+                        </div>
+                        <div class="form-field" style="margin-top: 8px;">
+                            <input #ft class="halfsies" name="ft" placeholder="ft">
+                            <input #in class="halfsies" name="in" placeholder="in">
+                        </div>
+                        <div class="form-field">
+                            <p style="margin-bottom: 0;">Weight<span class="required-star">*</span></p>
+                        </div>
+                        <div class="form-field" style="margin-top: 8px;">
+                            <input #lbs class="full" name="lbs" placeholder="lbs">
+                        </div>
+
+                        <div class="buttons">
+                            <button (click)="nextMeasure(quizProgress-1, [ft.value, in.value, lbs.value])" class="primary-button">Continue <i style="margin-left: 8px;" class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    }
+
+                    @if (quizProgress != 0 && quizProgress < 17 && quizQuestions[quizProgress-1].type == 'photo') {
+                        <h2 class="question" style="margin-bottom: 0;">{{quizQuestions[quizProgress-1].question}}</h2>
+                        <p class="additional">{{quizQuestions[quizProgress-1].extra}}</p>
+                        
+                        <div class="photo-drag">
+                            <input style="display: none;" type="file" #fileUpload>
+                            <img src="image-upload.png"> 
+                            <h5>Drag file here to upload</h5>
+                            <p style="margin-top: 0;" class="additional">File format: Image</p>
+                            <button (click)="fileUpload.click()" class="browse">or Browse</button>
+                            <p style="margin-top: 4px;" class="additional">Maximum size: 5MB</p>
+                        </div>
+
+                        <div class="buttons">
+                            <button (click)="nextSkip(quizProgress-1)" class="primary-button">Continue <i style="margin-left: 8px;" class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    }
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

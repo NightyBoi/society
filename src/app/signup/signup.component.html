@@ -1,0 +1,45 @@
+<div class="container-fluid login-section">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="login-form-section">
+                <h1 style="margin-top: 24px;">Start Your Journey</h1>
+                <div class="login-social">
+                    <a href="#"><h5><i class="fa-brands fa-facebook-f"></i></h5></a>
+                    <a href="#"><h5><i class="fa-brands fa-google"></i></h5></a>
+                    <a href="#"><h5><i class="fa-brands fa-linkedin-in"></i></h5></a>
+                </div>
+                <p class="email-p">or use your email for registration</p>
+
+                <form #loginForm="ngForm" (ngSubmit)="submitSignup(loginForm)" class="login-form">
+                    <div class="field-block">
+                        <label class="login-label" for="email">Email<span style="color: #AD1A23">*</span></label>
+                        <input ngModel required class="login-field" type="email" placeholder="example@gmail.com" name="email">
+                    </div>
+
+                    <div class="field-block">
+                        <label class="login-label" for="email">Password<span style="color: #AD1A23">*</span></label>
+                        <input ngModel required class="login-field" type="password" placeholder="********" name="password">
+                    </div>
+
+                    <div class="checkbox-block">
+                        <p>By creating an account, I agree to the <a class="link" href="#">Terms and Conditions</a>, <a class="link" href="#">Privacy Policy</a>, and <a class="link" href="#">Telehealth Consent</a>.</p>
+                    </div>
+
+                    <div class="cta-line">
+                        <button type="submit" class="primary-button"><h5>Get Started </h5><i style="margin-left: 8px;" class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="cta-line">
+                        <p>Already have an account? <a routerLink="/login">Log in</a></p>
+                    </div>
+                    
+                </form>
+
+                <p class="consultation">All patients must complete a virtual consultation, which will be reviewed by a dermatology provider who will determine if a prescription treatment is right for you.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img class="login-image" src="signup.png">
+        </div>
+    </div>
+</div>
